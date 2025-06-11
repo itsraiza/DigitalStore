@@ -69,7 +69,6 @@ const ProductPage = () => {
             ? `Resultados para: "${searchTerm}"`
             : "Produtos encontrados"
         }
-        titleAlign="left"
       >
        <a href={"/ViewPage"}>
         <ProductListing

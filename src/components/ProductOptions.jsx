@@ -5,10 +5,10 @@ const ProductOptions = ({ options = [], radius = "4px", shape = "square", type =
 
   const baseStyle = shape === "circle"
     ? "w-[31px] h-[31px] rounded-full"
-    : `h-[46px] px-4 rounded-[${radius}]`;
+    : `w-[auto] h-[46px] px-4 rounded-[${radius}]`;
 
   return (
-    <div className="flex gap-3 flex-wrap">
+    <div className="flex gap-4 flex-wrap">
       {options.map((option, index) => (
         <div
           key={index}
@@ -25,7 +25,7 @@ const ProductOptions = ({ options = [], radius = "4px", shape = "square", type =
             <span
               className={`${
                 shape === "square" ? "text-[16px]" : "text-[14px]"
-              } text-[#474747]`}
+              } text-[#474747] hover:text-white`}
             >
               {option}
             </span>

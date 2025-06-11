@@ -11,12 +11,12 @@ const BuyBox = ({
   children,
 }) => {
   return (
-    <div className="flex flex-col gap-4 ml-10">
+    <div className="flex flex-col gap-4 ml-10 max-lg:ml-5">
       <h1 className="text-[32px] text-[#1F1F1F]">{name}</h1>
       <span className="text-[12px] text-[#666666]">Ref: {reference}</span>
 
       <div className="flex items-center gap-2">
-        <div className="flex items-center gap-1 px-2 py-1 bg-warning rounded-[4px]">
+        <div className="flex items-center gap-1 py-1 rounded-[4px]">
           <span className="text-[14px]">{stars}</span>
           <img src="./src/assets/starticon.png" alt="star" className="w-[92px] h-[14px]" />
         </div>
@@ -35,7 +35,7 @@ const BuyBox = ({
         )}
       </div>
 
-        <p className="text-[14px] w-[440px] h-[66px] text-[#474747]">{description}</p>
+        <p className="text-[14px] w-[440px] h-[66px] max-lg:w-[335px] max-lg:h-[110px] text-[#474747]">{description}</p>
 
       
      <span className="text-[14px] text-[#8F8F8F] font-bold">Tamanho</span>
@@ -46,23 +46,24 @@ const BuyBox = ({
                         
                        
         />
-     <span className="text-[14px] text-[#8F8F8F] font-bold">Tamanho</span>
+     <span className="text-[14px] text-[#8F8F8F] font-bold mt-2">Tamanho</span>
 
          <ProductOptions type="color"
-                         shape="cicle"
+                         shape="circle"
                          options={["#6FEEFF", "#FF6969", "#5E5E5E", "#6D70B7"]}
                          
                         
         />
+
+      <button className="w-[220px] h-[48px] bg-[#FFB31F] text-white text-[16px] px-6 py-3 rounded cursor-pointer max-lg:w-full max-lg:mt-5">
+        Comprar
+      </button>
 
       <div className="flex flex-col gap-2">
         {children}
         
       </div>
 
-      <button className="w-[220px] h-[48px] bg-[#FFB31F] text-white text-[16px] px-6 py-3 rounded cursor-pointer">
-        Comprar
-      </button>
     </div>
   );
 };

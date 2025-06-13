@@ -4,6 +4,8 @@ import ProductListingPage from "../pages/ProductListingPage";
 import ProductViewPage from "../pages/ProductViewPage";
 import Category from "../pages/Category";
 import Orders from "../pages/Orders";
+import Login from "../pages/Login";
+import SignUp from "../pages/SignUp";
 
 const Paths = () => {
     return ( 
@@ -12,9 +14,11 @@ const Paths = () => {
                 <Routes>
                     <Route path="/" element={<HomePage/>}/>
                     <Route path="/produtos" element={<ProductListingPage/>}/>
+                    <Route path="/product/:id/:slug" element={<ProductViewPage/>}/>
                     <Route path="/categorias" element={<Category/>}/> 
                     <Route path="/pedidos" element={<Orders/>}/> 
-                    <Route path="/viewpage" element={<ProductViewPage/>}/>
+                    <Route path="/login" element={<Login/>}/>
+                    <Route path="/signup" element={<SignUp/>}/>
 
                 </Routes>
             </BrowserRouter>

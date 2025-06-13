@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ArrowLeft from "../assets/arrow-left.svg";
+import ArrowRight from "../assets/arrow-right.svg";
+
 
 const Gallery = ({
   className = "relative flex flex-col items-center bg-[#f5f5f5]",
@@ -59,24 +62,24 @@ const Gallery = ({
 
         {/* Seta Esquerda */}
         <button
-          className={`absolute top-1/2 left-4 -translate-y-1/2 p-2 bg-white rounded-full shadow ${
+          className={`absolute top-1/2 left-4 -translate-y-1/2 p-2 bg-white rounded-full shadow cursor-pointer ${
             currentIndex === 0 ? "opacity-30 cursor-not-allowed" : "hover:bg-gray-200"
           }`}
           onClick={showPrev}
           disabled={currentIndex === 0}
         >
-          <img src="./src/assets/arrow-left.svg" alt="Anterior" />
+          <img src={ArrowLeft} alt="Anterior" />
         </button>
 
         {/* Seta Direita */}
         <button
-          className={`absolute top-1/2 right-4 -translate-y-1/2 p-2 bg-white rounded-full shadow ${
+          className={`absolute top-1/2 right-4 -translate-y-1/2 p-2 bg-white rounded-full shadow cursor-pointer ${
             currentIndex === images.length - 1 ? "opacity-30 cursor-not-allowed" : "hover:bg-gray-200"
           }`}
           onClick={showNext}
           disabled={currentIndex === images.length - 1}
         >
-          <img src="./src/assets/arrow-right.svg" alt="Próximo" />
+          <img src={ArrowRight} alt="Próximo" />
         </button>
       </div>
 

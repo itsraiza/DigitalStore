@@ -40,8 +40,8 @@ const HeaderDesk = () => {
 
 
        <div className='flex justify-center items-center gap-7'>
-         <Link className='underline text-[16px] text-[#474747] max-lg:hidden'>Cadastre-se</Link>
-         <Link className='bg-[#C92071] w-[114px] h-[40px] p-1.5 text-white text-center font-bold rounded-[4px] max-lg:hidden' >Entrar</Link>
+         <Link to={"/signup"} className='underline text-[16px] text-[#474747] max-lg:hidden'>Cadastre-se</Link>
+         <Link to={"/login"} className='bg-[#C92071] w-[114px] h-[40px] p-1.5 text-white text-center font-bold rounded-[4px] max-lg:hidden' >Entrar</Link>
 
          <div className='relative'>
             <img src='/src/assets/mini-cart (1).svg' 

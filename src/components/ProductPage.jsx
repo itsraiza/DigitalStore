@@ -70,13 +70,13 @@ const ProductPage = () => {
             : "Produtos encontrados"
         }
       >
-       <a href={"/ViewPage"}>
+    
         <ProductListing
           showSection={false}
           limit={15}
           search={searchTerm} // <-- você pode passar para seu componente de listagem
         />
-        </a>
+    
       </Section>
 
       </div>

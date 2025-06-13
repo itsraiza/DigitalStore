@@ -1,6 +1,6 @@
 const ProductCard = ({
     image=[
-      {src: "product-image-1.png"},
+      {src: "/home-slide.png"},
 ],
     name ="K-Swiss V8 - Masculino",
     price ="200",

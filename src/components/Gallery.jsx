@@ -5,7 +5,7 @@ import ArrowRight from "../assets/arrow-right.svg";
 
 
 const Gallery = ({
-  className = "relative flex flex-col items-center bg-[#f5f5f5]",
+  className = "relative flex flex-col items-center bg-[#F5F5F5]",
   width = "",
   height = "",
   radius = "",
@@ -85,7 +85,7 @@ const Gallery = ({
 
       {home && (
 
-        <div className="absolute top-[20%] left-[100px] flex flex-col gap-7 w-[510px] h-[352px] max-lg:w-[297px] max-lg:h-[300px] max-lg:static max-lg:justify-center max-lg:items-center max-lg:gap-5 max-lg: mt-4"> 
+        <div className="max-lg:static absolute top-[20%] left-[100px] flex flex-col gap-7 w-[510px] h-[352px] max-lg:w-[297px] max-lg:h-[300px] max-lg:justify-center max-lg:items-center max-lg:gap-5 max-lg:mt-10 pb-10"> 
          <h6 className="text-[#F6AA1C] text-[16px] leading-none max-lg:text-[#C92071]">Melhores ofertas personalizadas</h6>
          <h2 className="font-bold text-[#1F1F1F] text-[64px] max-lg:text-[40px] max-lg:text-center">Queima de stoque 🔥</h2>
          <p className="text-[#474747] text-[18px] w-[495px] h-[68px] max-lg:w-64 max-lg:text-[16px] max-lg:text-center">Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.</p>

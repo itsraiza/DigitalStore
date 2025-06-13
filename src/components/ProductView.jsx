@@ -5,14 +5,24 @@ import ProductListing from "./ProductListing";
 import Section from "./Section";
 
 const ProductView = () => {
-    const {slug} = useParams();
+    const { slug } = useParams();
+
+    const formatSlug = (slug) => {
+        return slug
+            .split("-")
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+};
+
+    const slugFormatado = formatSlug(slug);
+    
 
     return ( 
         <>
 
-        <h1 className="text-[#474747] text-left ml-25 mt-5 max-lg:ml-5 max-lg:m-5">Home/ Produtos / Tênis / Nike / {slug}</h1>
+        <h1 className="text-[#474747] text-[14px] text-left ml-23 mt-5 max-lg:ml-5 max-lg:m-5"><span className="font-bold">Home </span>/ Produtos / Tênis / Nike / {slugFormatado}</h1>
         
-        <div className=" flex flex-row gap-2 px-20 mt-10 max-lg:flex-col max-lg:px-4">
+        <div className=" flex flex-row gap-2 px-23 mt-10 max-lg:flex-col max-lg:px-4">
              
             <Gallery 
             images={[
@@ -41,15 +51,16 @@ const ProductView = () => {
                     />
 
         </div>
-        <div className="mt-30">
+        <div className="lg:ml-10 lg:mr-10 mt-30">
         <Section title={"Produtos Recomendados"} 
                  titleAlign
                  link={"Ver tudo →"}>
 
+
         <ProductListing 
                         showSection={false} 
                         limit={4}
-                        className={"flex gap-6 justify-center overflow-x-auto max-lg:ml-5 max-lg:mr-5 max-lg:justify-start no-scrollbar"}
+                        className={"flex gap-6 lg:gap-35 justify-center overflow-x-auto max-lg:ml-5 max-lg:mr-5 max-lg:justify-start no-scrollbar"}
                         />
 
         </Section>

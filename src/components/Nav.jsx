@@ -1,7 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 
 const Nav = () => {
+  const location = useLocation();
+
+    const isProdutosActive =
+        location.pathname.startsWith("/produtos") ||
+        location.pathname.startsWith("/produto");
+
     return ( 
         <>
 
@@ -11,7 +17,7 @@ const Nav = () => {
             <NavLink to="/" className={({ isActive }) => isActive ? "underline" : ""}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/produtos" className={({ isActive }) => isActive ? "underline" : ""}>Produtos</NavLink>
+            <NavLink to="/produtos" className={() => (isProdutosActive ? "underline" : "")}>Produtos</NavLink>
           </li>
           <li>
             <NavLink to="/categorias" className={({ isActive }) => isActive ? "underline" : ""}>Categorias</NavLink>

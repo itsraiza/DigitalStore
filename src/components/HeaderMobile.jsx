@@ -1,8 +1,14 @@
 import { useState } from "react";
 import Logo from "./Logo";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const HeaderMobile = () => {
+
+    const location = useLocation();
+
+    const isProdutosActive =
+        location.pathname.startsWith("/produtos") ||
+        location.pathname.startsWith("/produto");
 
     const [searchTerm, setSearchTerm] = useState("");
     const navigate = useNavigate();
@@ -39,7 +45,7 @@ const HeaderMobile = () => {
                                         <NavLink to="/" className={({ isActive }) => isActive ? "underline" : ""}>Home</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/produtos" className={({ isActive }) => isActive ? "underline" : ""}>Produtos</NavLink>
+                                        <NavLink to="/produtos" className={() => (isProdutosActive ? "underline" : "")}>Produtos</NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/categorias" className={({ isActive }) => isActive ? "underline" : ""}>Categorias</NavLink>

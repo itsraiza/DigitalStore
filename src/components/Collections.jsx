@@ -29,7 +29,7 @@ const Collections = ({
         <div className="relative rounded-xl overflow-hidden">
         <img src="public/collection-2.png" 
              alt="img2" />
-        <span className="absolute top-5 left-8 bg-[#E7FF86] text-[12px] px-4 py-1 rounded-full font-bold">
+        <span className="absolute top-5 left-8 bg-[#E7FF86] text-[12px] px-4 py-1 rounded-full font-bold max-lg:top-3 max-lg:left-5">
         30% OFF
       </span>
 
@@ -42,7 +42,7 @@ const Collections = ({
         <div className="relative rounded-xl overflow-hidden">
         <img src="public/collection-3.png" 
              alt="img3" />
-        <span className="absolute top-5 left-3 bg-[#E7FF86] text-[12px] px-4 py-1 rounded-full font-bold">
+        <span className="absolute top-5 left-3 bg-[#E7FF86] text-[12px] px-4 py-1 rounded-full font-bold max-lg:top-3 max-lg:left-5">
         30% OFF
         </span>
 

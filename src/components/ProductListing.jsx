@@ -12,7 +12,7 @@ const ProductListing = ({
 
   {
     id:2,
-	  name: "Tênis Nike Revolution 6 Next Nature - Masculino",
+	  name: "Tênis Nike - Feminino",
 	  price: 1000,
     priceDiscount: 500
   },
@@ -89,7 +89,7 @@ const ProductListing = ({
 
   {
     id:13,
-    name: "Tênis Nike - Feminino",
+    name: "Tênis Nike Revolution 6 Next Nature - Masculino",
     price: 1000,
     priceDiscount: 500
   },
@@ -145,7 +145,7 @@ const ProductListing = ({
   <div className={`${className}`}>
       {displayedProducts.length > 0 ? (
         displayedProducts.map((product, index) => (
-          <Link to={`/product/${product.id}/${slugify(product.name)}`} key={index}>
+          <Link to={`/produto/${product.id}/${slugify(product.name)}`} key={index}>
             <ProductCard
               images={[{ src: product.image }]}
               name={product.name}

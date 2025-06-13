@@ -10,7 +10,7 @@ const ProductView = () => {
     return ( 
         <>
 
-        <h1 className="text-[#474747] text-left ml-25 mt-5">Home/ Produtos / Tênis / Nike / {slug}</h1>
+        <h1 className="text-[#474747] text-left ml-25 mt-5 max-lg:ml-5 max-lg:m-5">Home/ Produtos / Tênis / Nike / {slug}</h1>
         
         <div className=" flex flex-row gap-2 px-20 mt-10 max-lg:flex-col max-lg:px-4">
              

@@ -13,8 +13,8 @@ const ProductOptions = ({ options = [], radius = "4px", shape = "square", type =
         <div
           key={index}
           onClick={() => setSelected(index)}
-          className={`flex items-center justify-center font-bold border hover:bg-[#C92071] cursor-pointer ${
-            selected === index ? "border-2 border-[#C92071]" : "border border-[#CCCCCC]"
+          className={`flex items-center justify-center text-[#474747] font-bold border cursor-pointer ${
+            selected === index ? "text-white border-2 border-[#C92071] bg-[#C92071]" : "border border-[#CCCCCC]"
           } ${baseStyle}`}
           style={{
             borderRadius: shape === "square" ? radius : "50%",
@@ -25,7 +25,7 @@ const ProductOptions = ({ options = [], radius = "4px", shape = "square", type =
             <span
               className={`${
                 shape === "square" ? "text-[16px]" : "text-[14px]"
-              } text-[#474747] hover:text-white`}
+              }`}
             >
               {option}
             </span>

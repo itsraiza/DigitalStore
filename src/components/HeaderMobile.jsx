@@ -40,24 +40,24 @@ const HeaderMobile = () => {
                         <div className="lg:hidden absolute left-0 top-[100%] bg-white p-4 shadow-md w-[50%] h-screen">
                             <h2 className="text-[16px] text-[#474747] mb-8">Páginas</h2>
                             <nav className="flex flex-col gap-2">
-                                <ul className="flex flex-col justify-start gap-6 text-sm text-[#C92071] font-medium underline-offset-4">
+                                <ul className="flex flex-col justify-start gap-6 text-sm text-[#474747] font-medium underline-offset-4">
                                     <li>
-                                        <NavLink to="/" className={({ isActive }) => isActive ? "underline" : ""}>Home</NavLink>
+                                        <NavLink to="/" className={({ isActive }) =>  `hover:text-[#C92071] ${isActive ? "underline text-[#C92071]" : ""}`}>Home</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/produtos" className={() => (isProdutosActive ? "underline" : "")}>Produtos</NavLink>
+                                        <NavLink to="/produtos" className={() => (isProdutosActive ? "underline text-[#C92071]" : "hover:text-[#C92071]")}>Produtos</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/categorias" className={({ isActive }) => isActive ? "underline" : ""}>Categorias</NavLink>
+                                        <NavLink to="/categorias" className={({ isActive }) =>  `hover:text-[#C92071] ${isActive ? "underline text-[#C92071]" : ""}`}>Categorias</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/pedidos" className={({ isActive }) => isActive ? "underline" : ""}>Meus Pedidos</NavLink>
+                                        <NavLink to="/pedidos" className={({ isActive }) => `hover:text-[#C92071] ${isActive ? "underline text-[#C92071]" : ""}`}>Meus Pedidos</NavLink>
                                     </li>
                                 </ul>
 
                                 <div className="flex flex-col items-center gap-5 mt-10" >
                                     <Link to={"/login"} className="bg-[#C92071] text-white text-center px-4 py-2 rounded-[4px]">Entrar</Link>
-                                    <Link to={"/signup"} className="underline text-[#474747]">Cadastre-se</Link>
+                                    <Link to={"/signup"} className="underline text-[#474747">Cadastre-se</Link>
                                 </div>
 
                             </nav>

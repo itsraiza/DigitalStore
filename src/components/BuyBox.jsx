@@ -1,6 +1,7 @@
 import ProductOptions from "./ProductOptions";
 import StartIcon from "../assets/starticon.png";
 import Avaliacoes from "../assets/avaliação.png";
+import { Link } from "react-router-dom";
 
 const BuyBox = ({
   name,
@@ -56,13 +57,14 @@ const BuyBox = ({
                          
                         
         />
-      <a href="/pedidos">
       
+      <Link to={"/pedidos"}>
       <button className="w-[220px] h-[48px] bg-[#FFB31F] text-white text-[16px] px-6 py-3 rounded cursor-pointer max-lg:w-full max-lg:mt-5">
         Comprar
       </button>
+      </Link>
 
-      </a>
+      
       <div className="flex flex-col gap-2">
         {children}
         

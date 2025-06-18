@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Logo from "./Logo";
 import Nav from "./Nav";
 import { useState } from "react";
+import Cart from "../assets/mini-cart (1).svg";
 
 const HeaderDesk = () => {
 
@@ -44,7 +45,7 @@ const HeaderDesk = () => {
          <Link to={"/login"} className='bg-[#C92071] w-[114px] h-[40px] p-1.5 text-white text-center font-bold rounded-[4px] max-lg:hidden' >Entrar</Link>
 
          <div className='relative'>
-            <img src='/src/assets/mini-cart (1).svg' 
+            <img src={Cart}
                  alt='carrinho' 
                  className='w-5 h-10 cursor-pointer md:m-0'/>
             <span className='absolute p-[2px] -top-[-0.6px] right-[-7px] bg-[#C92071] text-white text-xs w-[14px] h-[14px] flex items-center justify-center rounded-full'>

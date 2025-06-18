@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Logo from "./Logo";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import Cart from "../assets/mini-cart (1).svg";
 
 const HeaderMobile = () => {
 
@@ -75,7 +76,7 @@ const HeaderMobile = () => {
                     </div>
 
                         <div className='relative mr-2'>
-                            <img src='/src/assets/mini-cart (1).svg'
+                            <img src={Cart}
                                 alt='carrinho'
                                 className='w-5 h-10 cursor-pointer md:m-0' />
                             <span className='absolute p-[2px] -top-[-0.6px] right-[-7px] bg-[#C92071] text-white text-xs w-[14px] h-[14px] flex items-center justify-center rounded-full'>

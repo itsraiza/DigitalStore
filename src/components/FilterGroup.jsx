@@ -1,7 +1,7 @@
-const FilterGroup = ({ 
-    title, 
-    options,
-    inputType ="checkbox"
+const FilterGroup = ({
+  title,
+  options,
+  inputType = "checkbox"
 
 }) => {
   return (

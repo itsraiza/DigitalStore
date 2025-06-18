@@ -5,16 +5,16 @@ import ProductListing from "../components/ProductListing";
 import Layout from "./Layout";
 
 const HomePage = () => {
-    return ( 
+    return (
         <>
-        <Layout>
-        <Gallery/>
-        <Collections/>
-        <ProductListing/>
-        <Offers/>
-        </Layout>
+            <Layout>
+                <Gallery />
+                <Collections />
+                <ProductListing />
+                <Offers />
+            </Layout>
         </>
-     );
+    );
 }
- 
+
 export default HomePage;

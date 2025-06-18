@@ -3,20 +3,20 @@ import HeaderMobile from "./HeaderMobile";
 
 const Header = () => {
 
-    return ( 
-        <>
+  return (
+    <>
       <header className="sticky top-0 z-50 bg-white shadow-md">
-      <div className="lg:hidden">
-        <HeaderMobile />
-      </div>
-      <div className="hidden lg:block">
-        <HeaderDesk />
-      </div>
-    </header>
+        <div className="lg:hidden">
+          <HeaderMobile />
+        </div>
+        <div className="hidden lg:block">
+          <HeaderDesk />
+        </div>
+      </header>
 
-        </>
-     );
+    </>
+  );
 }
- 
+
 
 export default Header;

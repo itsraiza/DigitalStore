@@ -3,20 +3,21 @@ import FilterGroup from "./FilterGroup";
 import ProductListing from "./ProductListing";
 import Section from "./Section";
 import { useLocation } from "react-router-dom";
+import Funnel from "../assets/funnel.svg";
 
 const ProductPage = () => {
-     const location = useLocation();
-     const searchParams = new URLSearchParams(location.search);
-     const searchTerm = searchParams.get("search") || "";
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const searchTerm = searchParams.get("search") || "";
 
-     console.log("Buscando por:", searchTerm);
+  console.log("Buscando por:", searchTerm);
 
-    const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-    return ( 
-        <>
+  return (
+    <>
 
-            {/* Ordenar e Filtro */}
+      {/* Ordenar e Filtro */}
       <div className="flex justify-between items-center m-15 mb-6 lg:justify-end max-lg:m-5">
         <div>
           <label className="text-[#474747] text-[16px] mb-2 block">
@@ -36,9 +37,9 @@ const ProductPage = () => {
           className="lg:hidden flex justify-center items-center mt-7 px-4 py-2 border border-[#CCCCCC] hover:bg-[#C92071] rounded cursor-pointer"
         >
           <img
-            src="./src/assets/funnel.svg"
+            src={Funnel}
             className="h-[40px] w-[40px]"
-            />
+          />
         </button>
       </div>
 
@@ -64,20 +65,20 @@ const ProductPage = () => {
         </aside>
 
         <Section
-        title={
-          searchTerm
-            ? `Resultados para: "${searchTerm}"`
-            : "Produtos encontrados"
-        }
-      >
-    
-        <ProductListing
-          showSection={false}
-          limit={15}
-          search={searchTerm} // <-- você pode passar para seu componente de listagem
-        />
-    
-      </Section>
+          title={
+            searchTerm
+              ? `Resultados para: "${searchTerm}"`
+              : "Produtos encontrados"
+          }
+        >
+
+          <ProductListing
+            showSection={false}
+            limit={15}
+            search={searchTerm}
+          />
+
+        </Section>
 
       </div>
 
@@ -106,8 +107,8 @@ const ProductPage = () => {
           </div>
         </div>
       )}
-        </>
-     );
+    </>
+  );
 }
- 
+
 export default ProductPage;

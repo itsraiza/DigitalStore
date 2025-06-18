@@ -4,12 +4,12 @@ import { NavLink, useLocation } from "react-router-dom";
 const Nav = () => {
   const location = useLocation();
 
-    const isProdutosActive =
-        location.pathname.startsWith("/produtos") ||
-        location.pathname.startsWith("/produto");
+  const isProdutosActive =
+    location.pathname.startsWith("/produtos") ||
+    location.pathname.startsWith("/produto");
 
-    return ( 
-        <>
+  return (
+    <>
 
       <nav className="mt-4 ml-20 pt-10 max-lg:hidden">
         <ul className="flex justify-start gap-6 text-sm text-[#474747] font-medium underline-offset-4">
@@ -28,8 +28,8 @@ const Nav = () => {
         </ul>
       </nav>
 
-        </>
-     );
+    </>
+  );
 }
- 
+
 export default Nav;

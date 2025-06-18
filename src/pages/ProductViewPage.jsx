@@ -2,14 +2,14 @@ import ProductView from "../components/ProductView";
 import Layout from "./Layout";
 
 const ProductViewPage = () => {
-    return ( 
+    return (
         <>
-        <Layout>
-            <ProductView/>
-        </Layout>
-        
+            <Layout>
+                <ProductView />
+            </Layout>
+
         </>
-     );
+    );
 }
- 
+
 export default ProductViewPage;

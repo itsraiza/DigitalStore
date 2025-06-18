@@ -2,13 +2,13 @@ import MyOrders from "../components/MyOrders";
 import Layout from "./Layout"
 
 const Orders = () => {
-    return ( 
+    return (
         <>
-        <Layout>
-         <MyOrders/>
-        </Layout>
+            <Layout>
+                <MyOrders />
+            </Layout>
         </>
-     );
+    );
 }
- 
+
 export default Orders;

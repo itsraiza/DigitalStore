@@ -23,7 +23,7 @@ const BuyBox = ({
           <span className="text-[14px]">{stars}</span>
           <img src={StartIcon} alt="star" className="w-[92px] h-[14px]" />
         </div>
-        <img src={Avaliacoes} alt="avaliações" className="w-[63px] h-[23px]"/>
+        <img src={Avaliacoes} alt="avaliações" className="w-[63px] h-[23px]" />
         <span className="text-[14px] text-[#8F8F8F]">{rating} avaliações</span>
       </div>
 
@@ -38,36 +38,38 @@ const BuyBox = ({
         )}
       </div>
 
-        <p className="text-[14px] w-[440px] h-[66px] max-lg:w-[335px] max-lg:h-[110px] text-[#474747]">{description}</p>
+      <p className="text-[14px] w-[440px] h-[66px] max-lg:w-[335px] max-lg:h-[110px] text-[#474747]">{description}</p>
 
-      
-     <span className="text-[14px] text-[#8F8F8F] font-bold">Tamanho</span>
 
-        <ProductOptions type="text"
-                        options={["39", "41", "42", "43"]}
-                        
-                        
-                       
-        />
-     <span className="text-[14px] text-[#8F8F8F] font-bold mt-2">Tamanho</span>
+      <span className="text-[14px] text-[#8F8F8F] font-bold">Tamanho</span>
 
-         <ProductOptions type="color"
-                         shape="circle"
-                         options={["#6FEEFF", "#FF6969", "#5E5E5E", "#6D70B7"]}
-                         
-                        
-        />
-      
+      <ProductOptions 
+        type="text"
+        options={["39", "41", "42", "43"]}
+
+
+
+      />
+      <span className="text-[14px] text-[#8F8F8F] font-bold mt-2">Tamanho</span>
+
+      <ProductOptions 
+        type="color"
+        shape="circle"
+        options={["#6FEEFF", "#FF6969", "#5E5E5E", "#6D70B7"]}
+
+
+      />
+
       <Link to={"/pedidos"}>
-      <button className="w-[220px] h-[48px] bg-[#FFB31F] text-white text-[16px] px-6 py-3 rounded cursor-pointer max-lg:w-full max-lg:mt-5">
-        Comprar
-      </button>
+        <button className="w-[220px] h-[48px] bg-[#FFB31F] text-white text-[16px] px-6 py-3 rounded cursor-pointer max-lg:w-full max-lg:mt-5">
+          Comprar
+        </button>
       </Link>
 
-      
+
       <div className="flex flex-col gap-2">
         {children}
-        
+
       </div>
 
     </div>

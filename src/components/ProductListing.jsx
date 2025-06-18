@@ -5,104 +5,104 @@ import Section from "./Section";
 
 
 const ProductListing = ({
-    products = [{
-    id:1,
+  products = [{
+    id: 1,
     name: "Tênis K-Swiss V8 - Masculino",
   },
 
   {
-    id:2,
-	  name: "Tênis Nike - Feminino",
-	  price: 1000,
+    id: 2,
+    name: "Tênis Nike - Feminino",
+    price: 1000,
     priceDiscount: 500
   },
 
   {
-    id:3,
+    id: 3,
     name: "Tênis Adidas - Masculino",
     price: 1000,
     priceDiscount: 500
   },
 
   {
-    id:4,
+    id: 4,
     name: "Tênis Vans - Feminino",
     price: 400,
     priceDiscount: 200
   },
 
   {
-    id:5,
+    id: 5,
     name: "All-Star - Feminino",
     price: 600,
     priceDiscount: 300
   },
 
   {
-    id:6,
+    id: 6,
     name: "Tênis Puma - Feminino",
     price: 400,
     priceDiscount: 200
-  }, 
+  },
 
   {
-    id:7,
+    id: 7,
     name: "All-Star - Masculino",
     price: 600,
     priceDiscount: 300
   },
 
   {
-    id:8,
+    id: 8,
     name: "Tênis Fila - Feminino",
     price: 800,
     priceDiscount: 400
   },
 
   {
-    id:9,
+    id: 9,
     name: "Tênis Fila - Masculino",
     price: 800,
     priceDiscount: 400
   },
 
   {
-    id:10,
+    id: 10,
     name: "Tênis Vans - Masculino",
     price: 400,
     priceDiscount: 200
   },
 
   {
-    id:11,
-     name: "Tênis Puma - Masculino",
-     price: 400,
-     priceDiscount: 200
+    id: 11,
+    name: "Tênis Puma - Masculino",
+    price: 400,
+    priceDiscount: 200
   },
 
   {
-    id:12,
+    id: 12,
     name: "Tênis Adidas - Feminino",
     price: 1000,
     priceDiscount: 500
   },
 
   {
-    id:13,
+    id: 13,
     name: "Tênis Nike Revolution 6 Next Nature - Masculino",
     price: 1000,
     priceDiscount: 500
   },
 
   {
-    id:14,
+    id: 14,
     name: "Tênis Olympikus - Masculino",
     price: 600,
     priceDiscount: 300
   },
 
   {
-    id:15,
+    id: 15,
     name: "Tênis Olympikus - Feminino",
     price: 600,
     priceDiscount: 300
@@ -119,17 +119,17 @@ const ProductListing = ({
 }) => {
 
   const slugify = (text) =>
-  text
-    .toLowerCase()
-    .normalize("NFD") // remove acentos
-    .replace(/[\u0300-\u036f]/g, "") // remove marcas dos acentos
-    .replace(/[^\w\s-]/g, "") // remove símbolos
-    .trim()
-    .replace(/\s+/g, "-"); // troca espaços por hífens
-  
-   const location = useLocation();
+    text
+      .toLowerCase()
+      .normalize("NFD") // remove acentos
+      .replace(/[\u0300-\u036f]/g, "") // remove marcas dos acentos
+      .replace(/[^\w\s-]/g, "") // remove símbolos
+      .trim()
+      .replace(/\s+/g, "-"); // troca espaços por hífens
 
-  // 🎯 Captura o parâmetro "search" da URL
+  const location = useLocation();
+
+  // Captura o parâmetro "search" da URL
   const params = new URLSearchParams(location.search);
   const searchQuery = params.get("search")?.toLowerCase() || "";
 
@@ -140,9 +140,9 @@ const ProductListing = ({
 
   const displayedProducts = limit ? filteredProducts.slice(0, limit) : filteredProducts;
 
-  const content = 
-  
-  <div className={`${className}`}>
+  const content =
+
+    <div className={`${className}`}>
       {displayedProducts.length > 0 ? (
         displayedProducts.map((product, index) => (
           <Link to={`/produto/${product.id}/${slugify(product.name)}`} key={index}>
@@ -163,27 +163,27 @@ const ProductListing = ({
 
   if (showSection)
 
-  return ( 
-    <>
-      <Section title="Produtos em alta" titleAlign="left" link="Ver tudo →">
-        <a href={"/produtos"}>
-         <div className="grid grid-cols-4 max-lg:grid-cols-2 flex-wrap justify-center gap-6">
-      {displayedProducts.map((product, index) => (
-        <ProductCard
-          key={index}
-          images={[{ src: product.image }]}
-          name={product.name}
-          price={product.price}
-          priceDiscount={product.priceDiscount}
-        /> 
-      ))}
-    </div>
-    </a>
-      </Section>
+    return (
+      <>
+        <Section title="Produtos em alta" titleAlign="left" link="Ver tudo →">
+          <Link to={"/produtos"}>
+            <div className="grid grid-cols-4 max-lg:grid-cols-2 flex-wrap justify-center gap-6">
+              {displayedProducts.map((product, index) => (
+                <ProductCard
+                  key={index}
+                  images={[{ src: product.image }]}
+                  name={product.name}
+                  price={product.price}
+                  priceDiscount={product.priceDiscount}
+                />
+              ))}
+            </div>
+          </Link>
+        </Section>
 
-    </>
-   );
-   return content;
+      </>
+    );
+  return content;
 }
- 
+
 export default ProductListing;

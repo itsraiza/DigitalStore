@@ -3,11 +3,11 @@ import "primeicons/primeicons.css"
 import Paths from "./components/Paths";
 
 const App = () => {
-  return ( 
+  return (
     <>
-      <Paths/>
+      <Paths />
     </>
-   );
+  );
 }
- 
+
 export default App;

@@ -2,15 +2,15 @@ import Categories from "../components/Categories";
 import Layout from "./Layout"
 
 const Category = () => {
-    return ( 
+    return (
         <>
-        <Layout>
+            <Layout>
 
-        <Categories/>
+                <Categories />
 
-        </Layout>
+            </Layout>
         </>
-     );
+    );
 }
- 
+
 export default Category;

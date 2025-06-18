@@ -2,13 +2,13 @@ import Construction from "../components/Construction";
 import Layout from "./Layout";
 
 const Login = () => {
-    return ( 
+    return (
         <>
-        <Layout>
-            <Construction/>
-        </Layout>
+            <Layout>
+                <Construction />
+            </Layout>
         </>
-     );
+    );
 }
- 
+
 export default Login;

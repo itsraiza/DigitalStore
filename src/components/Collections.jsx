@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 import Section from "./Section";
+import TShirt from "../assets/t-shirt.png";
+import Calcas from "../assets/calcas.png";
+import HeadPhones from "../assets/Headphones.png";
+import Tenis from "../assets/tenis.png";
 
 const Collections = ({
    home = true
@@ -13,7 +17,7 @@ const Collections = ({
         <div className={`flex flex-col justify-center items-center m-4`}>
           <div className=" relative flex justify-center items-center gap-4 m-2.5 max-lg:flex-col">
         <div className="relative rounded-xl overflow-hidden">
-        <img src="public/collection-1.png" 
+        <img src="/collection-1.png" 
              alt="img1" />
         <span className="absolute top-5 left-6 bg-[#E7FF86] text-[12px] px-4 py-1 rounded-full font-bold">
         30% OFF
@@ -27,7 +31,7 @@ const Collections = ({
         </div>
 
         <div className="relative rounded-xl overflow-hidden">
-        <img src="public/collection-2.png" 
+        <img src="/collection-2.png" 
              alt="img2" />
         <span className="absolute top-5 left-8 bg-[#E7FF86] text-[12px] px-4 py-1 rounded-full font-bold max-lg:top-3 max-lg:left-5">
         30% OFF
@@ -40,7 +44,7 @@ const Collections = ({
         </div>
 
         <div className="relative rounded-xl overflow-hidden">
-        <img src="public/collection-3.png" 
+        <img src="/collection-3.png" 
              alt="img3" />
         <span className="absolute top-5 left-3 bg-[#E7FF86] text-[12px] px-4 py-1 rounded-full font-bold max-lg:top-3 max-lg:left-5">
         30% OFF
@@ -61,7 +65,7 @@ const Collections = ({
     <div className="flex flex-col items-center min-w-[80px] cursor-pointer">
       <img
         className="w-[64px] bg-white rounded-full p-1"
-        src="./src/assets/t-shirt.png"
+        src={TShirt}
         alt="Camisetas"
         />
       <span className="text-xs font-bold text-[#474747] mt-2">
@@ -73,7 +77,7 @@ const Collections = ({
     <div className="flex flex-col items-center min-w-[80px] cursor-pointer">
       <img
         className="w-[64px] bg-white rounded-full p-1"
-        src="./src/assets/calcas.png"
+        src={Calcas}
         alt="Calças"
         />
       <span className="text-xs font-bold text-[#474747] mt-2">
@@ -85,7 +89,7 @@ const Collections = ({
     <div className="flex flex-col items-center min-w-[80px] cursor-pointer">
       <img
         className="w-[64px] bg-white rounded-full p-1"
-        src="./src/assets/calcas.png"
+        src={Calcas}
         alt="Bonés"
         />
       <span className="text-xs font-bold text-[#474747] mt-2">
@@ -97,7 +101,7 @@ const Collections = ({
     <div className="flex flex-col items-center min-w-[80px] cursor-pointer">
       <img
         className="w-[64px] bg-white rounded-full p-1"
-        src="./src/assets/Headphones.png"
+        src={HeadPhones}
         alt="Headphones"
         />
       <span className="text-xs font-bold text-[#474747] mt-2">
@@ -109,7 +113,7 @@ const Collections = ({
     <div className="flex flex-col items-center min-w-[80px] cursor-pointer">
       <img
         className="w-[64px] bg-white rounded-full p-1"
-        src="./src/assets/tenis.png"
+        src={Tenis}
         alt="Tênis"
         />
       <span className="text-xs font-bold text-[#474747] mt-2">

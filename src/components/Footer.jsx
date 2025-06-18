@@ -6,20 +6,20 @@ import IconTwitter from "../assets/icon_twitter.svg";
 
 const Footer = () => {
   const info1 = [
-    { text: "Sobre Drip Store", link: "/about" },
-    { text: "Segurança", link: "/security" },
-    { text: "Wishlist", link: "/wishlist" },
-    { text: "Blog", link: "/blog" },
-    { text: "Trabalhe conosco", link: "/careers" },
-    { text: "Meus pedidos", link: "/orders" },
+    { text: "Sobre Drip Store", link: "/" },
+    { text: "Segurança", link: "/" },
+    { text: "Wishlist", link: "/" },
+    { text: "Blog", link: "/" },
+    { text: "Trabalhe conosco", link: "/" },
+    { text: "Meus pedidos", link: "/pedidos" },
   ];
 
   const info2 = [
-    { text: "Camisetas", link: "/camisetas" },
-    { text: "Calças", link: "/calcas" },
-    { text: "Bonés", link: "/bones" },
-    { text: "Headphones", link: "/headphones" },
-    { text: "Tênis", link: "/tenis" },
+    { text: "Camisetas", link: "/categorias" },
+    { text: "Calças", link: "/categorias" },
+    { text: "Bonés", link: "/categorias" },
+    { text: "Headphones", link: "/categorias" },
+    { text: "Tênis", link: "/categorias" },
   ];
 
   const contato = [

@@ -105,7 +105,7 @@ npm run dev
 
 # 🌐 Deploy
 
-### Você pode ver o projeto online:
+ Você pode ver o projeto online:
 
  - Vercel: https://digital-store-murex.vercel.app/
 
@@ -114,7 +114,7 @@ npm run dev
 # 🔍 Observação
 
 - Algumas páginas podem estar em construção.
-- As funcionalidades de "Ordenar por" e "Filtrar por" são visuais 
+- As funcionalidades de "Ordenar por" e "Filtrar por" são visuais. 
 - Este projeto é uma simulação de loja para fins educacionais.
 
 

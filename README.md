@@ -100,6 +100,8 @@ npm install
 # 3. Execute em modo desenvolvedor
 npm run dev
 
+´´´
+
 ## 🌐 Deploy
 ### Você pode ver o projeto online:
 

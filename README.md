@@ -100,12 +100,15 @@ npm install
 # 3. Execute em modo desenvolvedor
 npm run dev
 
-´´´
+```
+---
 
 ## 🌐 Deploy
 ### Você pode ver o projeto online:
 
  - Vercel: https://digital-store-murex.vercel.app/
+
+---
 
 ## 👨‍💻  Autor
 Desenvolvido por: Raiza kelly

@@ -18,7 +18,7 @@ O objetivo deste projeto é desenvolver uma aplicação web completa de e-commer
 
 
 
-## 📄 Páginas Principais
+### 📄 Páginas Principais
 
 - Página Inicial  
 - Página de Listagem de Produtos  
@@ -26,7 +26,7 @@ O objetivo deste projeto é desenvolver uma aplicação web completa de e-commer
 
 
 
-## 🧪 Tecnologias Utilizadas
+### 🧪 Tecnologias Utilizadas
 
 - React  
 - Vite  
@@ -39,7 +39,7 @@ O objetivo deste projeto é desenvolver uma aplicação web completa de e-commer
 
 
 
-## 💻 Funcionalidades
+### 💻 Funcionalidades
 
 - Estrutura de navegação com React Router  
 - Layout responsivo com Tailwind  
@@ -50,7 +50,7 @@ O objetivo deste projeto é desenvolver uma aplicação web completa de e-commer
 
 
 
-## 📂 Estrutura de Pastas (Principais)
+# 📂 Estrutura de Pastas (Principais)
 
 ```
 DigitalStore/
@@ -77,7 +77,7 @@ DigitalStore/
 
 
 
-## 📦 Instalação
+# 📦 Instalação
 
 Este projeto utiliza **React + Vite**.
 
@@ -103,20 +103,20 @@ npm run dev
 ```
 
 
-## 🌐 Deploy
+# 🌐 Deploy
 ### Você pode ver o projeto online:
 
  - Vercel: https://digital-store-murex.vercel.app/
 
 
 
-## 📚 Licença
+# 📚 Licença
 
 - Este projeto é apenas para fins educacionais e não representa uma loja real.
 
 
 
-## 👨‍💻  Autor
+# 👨‍💻  Autor
 
 - Desenvolvido por: Raiza kelly
 - Curso: Desenvolvedor Web Full Stack 

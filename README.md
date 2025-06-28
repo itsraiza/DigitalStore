@@ -2,21 +2,21 @@
 
 Este projeto foi desenvolvido como parte do curso **Desenvolvedor Web Full Stack - Online 2.0**, promovido pela Geração Tech, com o objetivo de aplicar na prática os conhecimentos adquiridos em **React** e boas práticas de desenvolvimento front-end. A aplicação foi construída com base na [documentação oficial](https://github.com/digitalcollegebr/projeto-digital-store) do projeto e no layout disponibilizado no [Figma](https://www.figma.com/design/cfb4F7ZXMFQmvmTn3PKI4z/DRIP-STORE---DIGITAL-COLLEGE?node-id=22-30), simulando uma loja virtual moderna, responsiva e funcional.
 
----
 
-## 🎯 Objetivo
+
+# 🎯 Objetivo
 
 O objetivo deste projeto é desenvolver uma aplicação web completa de e-commerce utilizando React e tecnologias modernas de front-end. A proposta inclui a implementação de funcionalidades essenciais como sistema de navegação entre páginas, listagem e visualização de produtos, além da construção de uma interface responsiva e componentizada. O desenvolvimento segue os requisitos mínimos definidos na documentação do curso e tem como finalidade aplicar, na prática, os conhecimentos adquiridos ao longo da formação.
 
----
 
-## 🧱 Estrutura do Projeto
+
+# 🧱 Estrutura do Projeto
 
 ### ✅ Requisitos Mínimos
 
 - Desenvolvimento das funcionalidades essenciais, seguindo os requisitos definidos na [documentação oficial](https://github.com/digitalcollegebr/projeto-digital-store) do projeto.
 
----
+
 
 ## 📄 Páginas Principais
 
@@ -24,7 +24,7 @@ O objetivo deste projeto é desenvolver uma aplicação web completa de e-commer
 - Página de Listagem de Produtos  
 - Página de Visualização de Produto  
 
----
+
 
 ## 🧪 Tecnologias Utilizadas
 
@@ -37,7 +37,7 @@ O objetivo deste projeto é desenvolver uma aplicação web completa de e-commer
 - Figma  
 - GitHub  
 
----
+
 
 ## 💻 Funcionalidades
 
@@ -48,7 +48,7 @@ O objetivo deste projeto é desenvolver uma aplicação web completa de e-commer
 - Componentização completa da interface  
 - Suporte a múltiplas resoluções  
 
----
+
 
 ## 📂 Estrutura de Pastas (Principais)
 
@@ -75,7 +75,7 @@ DigitalStore/
 │   └── index.css                # Estilos globais
 ```
 
----
+
 
 ## 📦 Instalação
 
@@ -101,20 +101,20 @@ npm install
 npm run dev
 
 ```
----
+
 
 ## 🌐 Deploy
 ### Você pode ver o projeto online:
 
  - Vercel: https://digital-store-murex.vercel.app/
 
----
+
 
 ## 📚 Licença
 
 - Este projeto é apenas para fins educacionais e não representa uma loja real.
 
----
+
 
 ## 👨‍💻  Autor
 

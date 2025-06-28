@@ -110,10 +110,17 @@ npm run dev
 
 ---
 
+## 📚 Licença
+
+- Este projeto é apenas para fins educacionais e não representa uma loja real.
+
+---
+
 ## 👨‍💻  Autor
-Desenvolvido por: Raiza kelly
-Curso: Desenvolvedor Web Full Stack 
-Créditos: Projeto Geração Tech – Instituto Euvaldo Lodi (IEL)
+
+- Desenvolvido por: Raiza kelly
+- Curso: Desenvolvedor Web Full Stack 
+- Créditos: Projeto Geração Tech – Instituto Euvaldo Lodi (IEL)
 
 
 

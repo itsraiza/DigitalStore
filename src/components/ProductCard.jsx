@@ -1,7 +1,5 @@
 const ProductCard = ({
-  image = [
-    { src: "/home-slide.png" },
-  ],
+  image = "/home-slide.png",
   name = "K-Swiss V8 - Masculino",
   price = "200",
   priceDiscount = "100",
@@ -14,7 +12,7 @@ const ProductCard = ({
 
       <div className="relative flex flex-col justify-center items-center text-center mt-10 mx-auto w-full bg-white">
 
-        <img src={image[0].src}
+        <img src={image}
           alt={name}
           className="w-full max-w-[248px] h-[134px] max-lg:w-[124px] max-lg:h-[67px] object-cover p-5 m-6 rotate-[-30deg]"
         />

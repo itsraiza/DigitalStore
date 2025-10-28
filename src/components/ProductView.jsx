@@ -3,55 +3,50 @@ import BuyBox from "./BuyBox";
 import Gallery from "./Gallery";
 import ProductListing from "./ProductListing";
 import Section from "./Section";
+import Products from "./Products";
 
 const ProductView = () => {
-    const { slug } = useParams();
+    const { id } = useParams();
+    const product = Products.find((p) => p.id === parseInt(id));
 
-    const formatSlug = (slug) => {
-        return slug
-            .split("-")
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ");
-    };
-
-    const slugFormatado = formatSlug(slug);
+    if (!product) return <p>Produto não encontrado</p>;
 
 
     return (
         <>
 
-            <h1 className="text-[#474747] text-[14px] text-left ml-23 mt-5 max-lg:ml-5 max-lg:m-5"><span className="font-bold">Home </span>/ Produtos / Tênis / Nike / {slugFormatado}</h1>
+            <h1 className="text-[#474747] text-[14px] text-left ml-23 mt-5 max-lg:ml-5 max-lg:m-5">
+                <span className="font-bold">Home </span>/ Produtos / {product.name}
+            </h1>
 
-            <div className=" flex flex-row gap-2 px-23 mt-10 max-lg:flex-col max-lg:px-4">
+            <div className="flex flex-col lg:flex-row items-start justify-center gap-2 px-20 mt-10 max-lg:px-4">
 
                 <Gallery
-                    images={[
-                        { src: "/home-slide.png", background: "#E2E3FF" },
-                        { src: "/home-slide.png", background: "#FFE8BC" },
-                        { src: "/home-slide.png", background: "#FFC0BC" },
-                        { src: "/home-slide.png", background: "#DEC699" },
-                        { src: "/home-slide.png", background: "#E8DFCF" },
-                    ]}
+                    images= {product.images}
                     width="100%"
                     height="auto"
                     radius="4px"
-                    className="mb-10 w-full lg:mb-20 lg:max-w-[700px] lg:max-h-[570px] lg:top-[274px] lg:left-[100px]"
+                    className="w-full"
                     home={false}
+                    Pview={true}
                     showThumbs={true}
                     showBackground
-                />
+                    />
 
+               
 
-                <BuyBox name={"Tênis Nike Revolution 6 Next Nature Masculino"}
-                    reference={"Casual | Nike | REF:38416711"}
-                    rating={"(90)"}
-                    price={"519"}
-                    priceDiscount={"259"}
-                    description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."}
+                <BuyBox 
+                    name={product.name}
+                    reference={product.reference}
+                    rating={product.rating}
+                    price={product.price}
+                    priceDiscount={product.priceDiscount}
+                    description={product.description}
+                    image={product.image}
                 />
 
             </div>
-            <div className="lg:ml-10 lg:mr-10 mt-30">
+            <div className="lg:ml-10 lg:mr-10 mt-20">
                 <Section title={"Produtos Recomendados"}
                     titleAlign
                     link={"Ver tudo →"}>

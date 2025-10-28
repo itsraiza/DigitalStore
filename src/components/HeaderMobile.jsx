@@ -2,8 +2,11 @@ import { useState } from "react";
 import Logo from "./Logo";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import Cart from "../assets/mini-cart (1).svg";
+import Lixeira from "../assets/lixeira.png";
+import { useCart } from "./CartContext"; 
 
 const HeaderMobile = () => {
+
 
     const location = useLocation();
 
@@ -24,6 +27,9 @@ const HeaderMobile = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
+    const [open, setOpen] = useState(false);
+
+    const { cartItems, totalItems, totalPrice, clearCart, removeFromCart } = useCart();
 
     return (
 
@@ -75,13 +81,71 @@ const HeaderMobile = () => {
                         </button>
                     </div>
 
-                    <div className='relative mr-2'>
-                        <img src={Cart}
-                            alt='carrinho'
-                            className='w-5 h-10 cursor-pointer md:m-0' />
-                        <span className='absolute p-[2px] -top-[-0.6px] right-[-7px] bg-[#C92071] text-white text-xs w-[14px] h-[14px] flex items-center justify-center rounded-full'>
-                            2
-                        </span>
+                    <div className="relative mr-2">
+                        <img
+                            src={Cart}
+                            alt="carrinho"
+                            className="w-5 h-10 cursor-pointer md:m-0"
+                            onClick={() => setOpen(!open)}
+                        />
+                        {totalItems > 0 && (
+                            <span className="absolute p-[2px] -top-[-0.6px] right-[-7px] bg-[#C92071] text-white text-xs w-[14px] h-[14px] flex items-center justify-center rounded-full">
+                            {totalItems}
+                            </span>
+                        )}
+
+                        {/* DROPDOWN DO CARRINHO */}
+                        {open && (
+                            <div className="absolute right-0 mt-2 w-72 bg-white shadow-lg rounded-lg p-4 z-50">
+                            <h2 className="font-bold text-gray-700 mb-2">Meu Carrinho</h2>
+
+                            {cartItems.length === 0 ? (
+                                <p className="text-gray-500">Carrinho vazio</p>
+                            ) : (
+                                <>
+                                <div className="space-y-2 max-h-40 overflow-y-auto">
+                                    {cartItems.map((item) => (
+                                    <div key={item.id} className="flex items-center justify-between">
+                                        <img src={item.image} alt={item.name} className="w-10 h-10 object-cover" />
+                                        <div className="flex-1 ml-2">
+                                        <p className="text-sm font-medium">{item.name}</p>
+                                        <p className="text-xs text-gray-500">R$ {item.price.toFixed(2)}</p>
+                                        </div>
+                                        <span className="text-sm font-semibold mr-2">x{item.quantity}</span>
+                                        <img
+                                            src={Lixeira}
+                                            alt="lixeira"
+                                            className="w-4 h-4 cursor-pointer"
+                                            onClick={() => removeFromCart(item.id)}
+                                        />
+                                    </div>
+                                    ))}
+                                </div>
+
+                                <div className="mt-3">
+                                    <p className="flex justify-between font-semibold">
+                                    <span>Valor total:</span>
+                                    <span className="text-[#C92071]">R$ {totalPrice.toFixed(2)}</span>
+                                    </p>
+                                    <div className="flex justify-between mt-2">
+                                    <button
+                                        onClick={clearCart}
+                                        className="text-sm text-gray-500 hover:underline cursor-pointer"
+                                    >
+                                        Esvaziar
+                                    </button>
+                                    <Link
+                                        to="/cart"
+                                        className="bg-[#C92071] text-white px-3 py-1 rounded-md text-sm"
+                                    >
+                                        Ver Carrinho
+                                    </Link>
+                                    </div>
+                                </div>
+                                </>
+                            )}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

@@ -1,117 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import Section from "./Section";
+import Products from "./Products";
 
 
 
 const ProductListing = ({
-  products = [{
-    id: 1,
-    name: "Tênis K-Swiss V8 - Masculino",
-  },
-
-  {
-    id: 2,
-    name: "Tênis Nike - Feminino",
-    price: 1000,
-    priceDiscount: 500
-  },
-
-  {
-    id: 3,
-    name: "Tênis Adidas - Masculino",
-    price: 1000,
-    priceDiscount: 500
-  },
-
-  {
-    id: 4,
-    name: "Tênis Vans - Feminino",
-    price: 400,
-    priceDiscount: 200
-  },
-
-  {
-    id: 5,
-    name: "All-Star - Feminino",
-    price: 600,
-    priceDiscount: 300
-  },
-
-  {
-    id: 6,
-    name: "Tênis Puma - Feminino",
-    price: 400,
-    priceDiscount: 200
-  },
-
-  {
-    id: 7,
-    name: "All-Star - Masculino",
-    price: 600,
-    priceDiscount: 300
-  },
-
-  {
-    id: 8,
-    name: "Tênis Fila - Feminino",
-    price: 800,
-    priceDiscount: 400
-  },
-
-  {
-    id: 9,
-    name: "Tênis Fila - Masculino",
-    price: 800,
-    priceDiscount: 400
-  },
-
-  {
-    id: 10,
-    name: "Tênis Vans - Masculino",
-    price: 400,
-    priceDiscount: 200
-  },
-
-  {
-    id: 11,
-    name: "Tênis Puma - Masculino",
-    price: 400,
-    priceDiscount: 200
-  },
-
-  {
-    id: 12,
-    name: "Tênis Adidas - Feminino",
-    price: 1000,
-    priceDiscount: 500
-  },
-
-  {
-    id: 13,
-    name: "Tênis Nike Revolution 6 Next Nature - Masculino",
-    price: 1000,
-    priceDiscount: 500
-  },
-
-  {
-    id: 14,
-    name: "Tênis Olympikus - Masculino",
-    price: 600,
-    priceDiscount: 300
-  },
-
-  {
-    id: 15,
-    name: "Tênis Olympikus - Feminino",
-    price: 600,
-    priceDiscount: 300
-  },
-
-
-
-  ],
-
+  products = Products,
   showSection = true,
   limit = 8,
   className = "grid grid-cols-3 max-lg:grid-cols-2 flex-wrap justify-center gap-6"
@@ -147,7 +42,7 @@ const ProductListing = ({
         displayedProducts.map((product, index) => (
           <Link to={`/produto/${product.id}/${slugify(product.name)}`} key={index}>
             <ProductCard
-              images={[{ src: product.image }]}
+              image={product.image}
               name={product.name}
               price={product.price}
               priceDiscount={product.priceDiscount}
@@ -171,7 +66,7 @@ const ProductListing = ({
               {displayedProducts.map((product, index) => (
                 <ProductCard
                   key={index}
-                  images={[{ src: product.image }]}
+                  image={product.image}
                   name={product.name}
                   price={product.price}
                   priceDiscount={product.priceDiscount}

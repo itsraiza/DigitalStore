@@ -107,7 +107,7 @@ const HeaderDesk = () => {
                             Esvaziar
                           </button>
                           <Link
-                            to="/cart"
+                            to="/pedidos"
                             className="bg-[#C92071] text-white px-3 py-1 rounded-md text-sm"
                           >
                             Ver Carrinho
